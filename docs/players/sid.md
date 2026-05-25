@@ -1,8 +1,8 @@
-# Rock Hammerfirst - The Broken Axe of Richmondtree
+# Versid "Sid" Von Malozadim
 
 * **Level**: 1
-* **Species**: Dwarf
-* **Class**: Fighter
+* **Species**: :mag_right:
+* **Class**: Cleric
 * **Background**: :mag_right:
 * **Alignment**: :mag_right:
 * **Age**: :mag_right:
