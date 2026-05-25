@@ -21,6 +21,7 @@ The Drojan Empire is the oldest continuous power on Osoth — a civilization so 
 * [Bracara Augusta](cities/bracara-augusta.md) :star:
 * [Oceanstar](cities/oceanstar.md)
 * [Greenflower](cities/greenflower.md)
+* [Richmondtree](cities/richmondtree.md)
 
 ---
 
