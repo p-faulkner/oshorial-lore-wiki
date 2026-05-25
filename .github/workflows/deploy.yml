@@ -1,4 +1,4 @@
-name: Deploy MkDocs to GitHub Pages
+name: Deploy Jekyll to GitHub Pages
 
 on:
   push:
@@ -21,21 +21,18 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.11"
-
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Build site
-        run: mkdocs build --site-dir site
+      - uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: ./_site
 
   deploy:
     runs-on: ubuntu-latest

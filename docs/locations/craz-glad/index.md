@@ -1,1 +1,0 @@
-* A northern country of Osoth

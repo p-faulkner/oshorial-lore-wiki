@@ -1,11 +1,11 @@
 # Oshorial Lore Wiki
 
-This repository contains the source for the Oshorial campaign wiki, built with MkDocs and the Material theme.
+This repository contains the source for the Oshorial campaign wiki, built with Jekyll and deployed with GitHub Pages.
 
 ## What You Need
 
-- Python 3.10 or newer
-- `pip`
+- Ruby (recommended: latest stable)
+- Bundler (`gem install bundler`)
 - A terminal on macOS or Windows
 
 ## Run Locally on macOS
@@ -16,29 +16,22 @@ This repository contains the source for the Oshorial campaign wiki, built with M
 cd /Users/patrickfaulkner/Documents/repos/oshorial-lore-wiki
 ```
 
-2. Create and activate a virtual environment:
+2. Install dependencies:
 
 ```bash
-python3 -m venv .venv
-source .venv/bin/activate
+bundle install
 ```
 
-3. Install the dependencies:
+3. Start the local site server:
 
 ```bash
-pip install -r requirements.txt
+bundle exec jekyll serve --livereload
 ```
 
-4. Start the local documentation server:
-
-```bash
-mkdocs serve
-```
-
-5. Open the site in your browser at:
+4. Open the site in your browser at:
 
 ```text
-http://127.0.0.1:8000
+http://127.0.0.1:4000
 ```
 
 ## Run Locally on Windows
@@ -49,35 +42,22 @@ http://127.0.0.1:8000
 cd C:\Users\<your-username>\Documents\repos\oshorial-lore-wiki
 ```
 
-2. Create and activate a virtual environment:
+2. Install dependencies:
 
 ```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
+bundle install
 ```
 
-If PowerShell blocks activation scripts, run this once in the same terminal first:
+3. Start the local site server:
 
 ```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+bundle exec jekyll serve --livereload
 ```
 
-3. Install the dependencies:
-
-```powershell
-pip install -r requirements.txt
-```
-
-4. Start the local documentation server:
-
-```powershell
-mkdocs serve
-```
-
-5. Open the site in your browser at:
+4. Open the site in your browser at:
 
 ```text
-http://127.0.0.1:8000
+http://127.0.0.1:4000
 ```
 
 ## Useful Commands
@@ -85,17 +65,18 @@ http://127.0.0.1:8000
 Build the static site without serving it locally:
 
 ```bash
-mkdocs build
+bundle exec jekyll build
 ```
 
 ## Content Layout
 
-- `docs/index.md` - Home page
+- `docs/index.html` - Home page
 - `docs/locations/` - Location pages
 - `docs/npcs/` - NPC pages
 - `docs/players/` - Player character pages
+- `docs/_layouts/default.html` - Shared Jekyll page layout
 
 ## Notes
 
-- If you add new pages, update `mkdocs.yml` so they appear in the navigation.
-- Keep the virtual environment out of version control; `.venv/` is already a local-only setup step.
+- This repository uses `docs/` as the Jekyll source directory.
+- Add new content as `.html` files with Jekyll front matter (`---` block at the top).

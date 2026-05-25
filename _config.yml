@@ -1,0 +1,8 @@
+title: Oshorial Lore Wiki
+description: World lore, locations, NPCs, and player characters for the Oshorial campaign
+source: docs
+baseurl: /oshorial-lore-wiki
+url: https://p-faulkner.github.io
+markdown: kramdown
+kramdown:
+  input: GFM

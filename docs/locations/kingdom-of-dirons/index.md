@@ -1,1 +1,0 @@
-* Middle Kingdom of Ebix
